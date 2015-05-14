@@ -22,9 +22,13 @@ stim = data['stim']
 rho = data['rho']
 
 
-# Fill in these values
-sampling_period = # in ms
-num_timesteps = 
+# Fill in these valuess
+sampling_period = 2 # in ms
+num_timesteps = 150
+
+num_spikes= rho[num_timesteps:].sum(0)
+
+
 
 sta = compute_sta(stim, rho, num_timesteps)
 
